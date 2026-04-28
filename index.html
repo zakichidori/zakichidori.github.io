@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chidori Hub Streaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Name check overlay -->
+  <div id="siteLock" class="site-lock" role="dialog" aria-modal="true" aria-label="Last name check">
+    <div class="site-lock-card">
+      <h2>Quick Check</h2>
+      <p>Type Zaki's last name to continue.</p>
+      <input id="passwordInput" type="text" placeholder="Last name" autocomplete="off" />
+      <button id="unlockButton" type="button">Unlock</button>
+      <p id="passwordStatus" class="password-status" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <div class="lightning-overlay" aria-hidden="true"></div>
+
+  <main class="hub-shell">
+    <!-- FIX: pointer-events: none added in CSS so this doesn't block clicks -->
+    <div class="side-shoutout" aria-hidden="true">raseem♥ THE GOAT</div>
+    <div id="thunderboltArtLeft" class="thunderbolt-art thunderbolt-left" aria-hidden="true">
+      <div class="tbolt-wrap">
+        <div class="tbolt">
+          <svg class="bolt-svg" width="90" height="310" viewBox="0 0 90 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="58,0 20,138 46,138 26,310 80,118 50,118" fill="#9b40ff" stroke="#cc88ff" stroke-width="1.5" stroke-linejoin="round"/>
+            <polygon points="56,16 32,126 50,126 34,278 68,130 44,130" fill="#bf80ff" opacity="0.4"/>
+          </svg>
+          <svg class="ripple-svg" viewBox="0 0 90 310" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="58,0 20,138 46,138 26,310" fill="none" stroke="#e0aaff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="18 60" opacity="0.9">
+              <animate attributeName="stroke-dashoffset" from="0" to="-78" dur="1.1s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.1s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="58,0 20,138 46,138 26,310" fill="none" stroke="#bf70ff" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 80" opacity="0.7">
+              <animate attributeName="stroke-dashoffset" from="-30" to="-108" dur="1.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.4s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="80,118 50,118 58,0" fill="none" stroke="#e0aaff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="14 55" opacity="0.85">
+              <animate attributeName="stroke-dashoffset" from="0" to="-69" dur="0.95s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.85;0.2;0.85" dur="0.95s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="80,118 50,118 58,0" fill="none" stroke="#9930ff" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 70" opacity="0.6">
+              <animate attributeName="stroke-dashoffset" from="-20" to="-89" dur="1.3s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.3s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="46,138 26,310" fill="none" stroke="#d080ff" stroke-width="3" stroke-linecap="round" stroke-dasharray="22 50" opacity="0.9">
+              <animate attributeName="stroke-dashoffset" from="0" to="-72" dur="0.85s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="1;0.3;1" dur="0.85s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="58,0 80,118" fill="none" stroke="#f0ccff" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 40" opacity="0.8">
+              <animate attributeName="stroke-dashoffset" from="0" to="-50" dur="0.7s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.8;0.15;0.8" dur="0.7s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="20,138 46,138 50,118 80,118" fill="none" stroke="#cc66ff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="12 30" opacity="0.85">
+              <animate attributeName="stroke-dashoffset" from="0" to="-42" dur="0.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.9;0.2;0.9" dur="0.6s" repeatCount="indefinite"/>
+            </polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div id="thunderboltArt" class="thunderbolt-art thunderbolt-right" aria-hidden="true">
+      <div class="tbolt-wrap">
+        <div class="tbolt">
+          <svg class="bolt-svg" width="90" height="310" viewBox="0 0 90 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="58,0 20,138 46,138 26,310 80,118 50,118" fill="#9b40ff" stroke="#cc88ff" stroke-width="1.5" stroke-linejoin="round"/>
+            <polygon points="56,16 32,126 50,126 34,278 68,130 44,130" fill="#bf80ff" opacity="0.4"/>
+          </svg>
+          <svg class="ripple-svg" viewBox="0 0 90 310" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="58,0 20,138 46,138 26,310" fill="none" stroke="#e0aaff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="18 60" opacity="0.9">
+              <animate attributeName="stroke-dashoffset" from="0" to="-78" dur="1.1s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.1s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="58,0 20,138 46,138 26,310" fill="none" stroke="#bf70ff" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 80" opacity="0.7">
+              <animate attributeName="stroke-dashoffset" from="-30" to="-108" dur="1.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.4s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="80,118 50,118 58,0" fill="none" stroke="#e0aaff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="14 55" opacity="0.85">
+              <animate attributeName="stroke-dashoffset" from="0" to="-69" dur="0.95s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.85;0.2;0.85" dur="0.95s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="80,118 50,118 58,0" fill="none" stroke="#9930ff" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 70" opacity="0.6">
+              <animate attributeName="stroke-dashoffset" from="-20" to="-89" dur="1.3s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.3s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="46,138 26,310" fill="none" stroke="#d080ff" stroke-width="3" stroke-linecap="round" stroke-dasharray="22 50" opacity="0.9">
+              <animate attributeName="stroke-dashoffset" from="0" to="-72" dur="0.85s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="1;0.3;1" dur="0.85s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="58,0 80,118" fill="none" stroke="#f0ccff" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 40" opacity="0.8">
+              <animate attributeName="stroke-dashoffset" from="0" to="-50" dur="0.7s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.8;0.15;0.8" dur="0.7s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="20,138 46,138 50,118 80,118" fill="none" stroke="#cc66ff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="12 30" opacity="0.85">
+              <animate attributeName="stroke-dashoffset" from="0" to="-42" dur="0.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.9;0.2;0.9" dur="0.6s" repeatCount="indefinite"/>
+            </polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div id="thunderboltChidoriLeft" class="thunderbolt-art thunderbolt-left" aria-hidden="true">
+      <div class="tbolt-wrap">
+        <div class="tbolt">
+          <svg class="bolt-svg bolt-svg-blue" width="90" height="310" viewBox="0 0 90 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="58,0 20,138 46,138 26,310 80,118 50,118" fill="#1a6fff" stroke="#88ccff" stroke-width="1.5" stroke-linejoin="round"/>
+            <polygon points="56,16 32,126 50,126 34,278 68,130 44,130" fill="#70b0ff" opacity="0.4"/>
+          </svg>
+          <svg class="ripple-svg" viewBox="0 0 90 310" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="58,0 20,138 46,138 26,310" fill="none" stroke="#aaddff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="18 60" opacity="0.9">
+              <animate attributeName="stroke-dashoffset" from="0" to="-78" dur="1.1s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.1s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="58,0 20,138 46,138 26,310" fill="none" stroke="#5599ff" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 80" opacity="0.7">
+              <animate attributeName="stroke-dashoffset" from="-30" to="-108" dur="1.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.4s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="80,118 50,118 58,0" fill="none" stroke="#aaddff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="14 55" opacity="0.85">
+              <animate attributeName="stroke-dashoffset" from="0" to="-69" dur="0.95s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.85;0.2;0.85" dur="0.95s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="80,118 50,118 58,0" fill="none" stroke="#1144cc" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 70" opacity="0.6">
+              <animate attributeName="stroke-dashoffset" from="-20" to="-89" dur="1.3s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.3s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="46,138 26,310" fill="none" stroke="#77bbff" stroke-width="3" stroke-linecap="round" stroke-dasharray="22 50" opacity="0.9">
+              <animate attributeName="stroke-dashoffset" from="0" to="-72" dur="0.85s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="1;0.3;1" dur="0.85s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="58,0 80,118" fill="none" stroke="#cceeff" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 40" opacity="0.8">
+              <animate attributeName="stroke-dashoffset" from="0" to="-50" dur="0.7s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.8;0.15;0.8" dur="0.7s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="20,138 46,138 50,118 80,118" fill="none" stroke="#44aaff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="12 30" opacity="0.85">
+              <animate attributeName="stroke-dashoffset" from="0" to="-42" dur="0.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.9;0.2;0.9" dur="0.6s" repeatCount="indefinite"/>
+            </polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div id="thunderboltChidoriRight" class="thunderbolt-art thunderbolt-right" aria-hidden="true">
+      <div class="tbolt-wrap">
+        <div class="tbolt">
+          <svg class="bolt-svg bolt-svg-blue" width="90" height="310" viewBox="0 0 90 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="58,0 20,138 46,138 26,310 80,118 50,118" fill="#1a6fff" stroke="#88ccff" stroke-width="1.5" stroke-linejoin="round"/>
+            <polygon points="56,16 32,126 50,126 34,278 68,130 44,130" fill="#70b0ff" opacity="0.4"/>
+          </svg>
+          <svg class="ripple-svg" viewBox="0 0 90 310" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="58,0 20,138 46,138 26,310" fill="none" stroke="#aaddff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="18 60" opacity="0.9">
+              <animate attributeName="stroke-dashoffset" from="0" to="-78" dur="1.1s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.1s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="58,0 20,138 46,138 26,310" fill="none" stroke="#5599ff" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 80" opacity="0.7">
+              <animate attributeName="stroke-dashoffset" from="-30" to="-108" dur="1.4s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.4s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="80,118 50,118 58,0" fill="none" stroke="#aaddff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="14 55" opacity="0.85">
+              <animate attributeName="stroke-dashoffset" from="0" to="-69" dur="0.95s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.85;0.2;0.85" dur="0.95s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="80,118 50,118 58,0" fill="none" stroke="#1144cc" stroke-width="2" stroke-linecap="round" stroke-dasharray="8 70" opacity="0.6">
+              <animate attributeName="stroke-dashoffset" from="-20" to="-89" dur="1.3s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.3s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="46,138 26,310" fill="none" stroke="#77bbff" stroke-width="3" stroke-linecap="round" stroke-dasharray="22 50" opacity="0.9">
+              <animate attributeName="stroke-dashoffset" from="0" to="-72" dur="0.85s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="1;0.3;1" dur="0.85s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="58,0 80,118" fill="none" stroke="#cceeff" stroke-width="2" stroke-linecap="round" stroke-dasharray="10 40" opacity="0.8">
+              <animate attributeName="stroke-dashoffset" from="0" to="-50" dur="0.7s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.8;0.15;0.8" dur="0.7s" repeatCount="indefinite"/>
+            </polyline>
+            <polyline points="20,138 46,138 50,118 80,118" fill="none" stroke="#44aaff" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="12 30" opacity="0.85">
+              <animate attributeName="stroke-dashoffset" from="0" to="-42" dur="0.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.9;0.2;0.9" dur="0.6s" repeatCount="indefinite"/>
+            </polyline>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="hero-brand">
+        <!-- Chidori theme logo -->
+        <img
+          class="hero-logo chidori-logo"
+          src="https://i.ibb.co/whfP7LmP/c-Users-zaki-App-Data-Roaming-Cursor-User-workspace-Storage-b2ff2dc92f04416442a5b765bc83d43b-images.png"
+          alt="ChidoriHub logo"
+        />
+        <!-- FIX: removed hero-logo class from ypk-logo div to prevent conflicting display rules -->
+        <div class="ypk-logo" aria-hidden="true">ypk</div>
+        <div>
+          <p id="siteKicker" class="kicker">Live Chidori Night</p>
+          <h1 id="siteTitle">Chidori Hub Streaming</h1>
+          <p id="siteSubtext" class="subtext">Electric lightning vibes with auto-loaded games and best source stream defaults.</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="controls-card" aria-label="Filters and game controls">
+      <div class="filters">
+        <label for="sportSelect">Sport</label>
+        <select id="sportSelect">
+          <option value="">Loading sports...</option>
+        </select>
+      </div>
+      <div class="filters">
+        <label for="themeSelect">Theme</label>
+        <select id="themeSelect">
+          <option value="chidori">Chidori Theme</option>
+          <option value="ypk">YPK Red Theme</option>
+          <option value="micheal-scofield">Micheal Scofield</option>
+          <option value="rasengan">Rasengan Orange</option>
+          <option value="r4seem">Raseem Theme (R4)</option>
+        </select>
+      </div>
+      <!-- FIX: aria-live so screen readers announce status changes -->
+      <p id="statusText" class="status-text" aria-live="polite">Fetching live data...</p>
+    </section>
+
+    <section class="content-grid">
+      <aside class="matches-card" aria-label="Matches list">
+        <h2>Matches</h2>
+        <div id="matchesList" class="matches-list"></div>
+      </aside>
+
+      <section class="player-card" aria-label="Game stream player">
+        <div class="player-topbar">
+          <h2 id="currentMatchTitle">Select a match</h2>
+          <select id="streamSelect" disabled>
+            <option value="">No streams loaded</option>
+          </select>
+        </div>
+
+        <div class="player-wrap">
+          <!-- FIX: loading overlay so users know the stream is buffering -->
+          <div id="playerLoadingOverlay" class="player-loading-overlay" style="display:none;">
+            <div class="player-spinner"></div>
+            <span>Loading stream…</span>
+          </div>
+          <iframe
+            id="streamPlayer"
+            title="Live stream player"
+            scrolling="no"
+            allowfullscreen="yes"
+            allow="encrypted-media; picture-in-picture;"
+            width="100%"
+            height="100%"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
