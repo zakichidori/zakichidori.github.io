@@ -1,0 +1,736 @@
+:root {
+  --bg-0: #050714;
+  --bg-1: #0b1433;
+  --bg-2: #182968;
+  --bolt: #84dcff;
+  --text: #ebf6ff;
+  --muted: #aac4e8;
+  --panel: rgba(8, 14, 40, 0.8);
+  --panel-border: rgba(117, 189, 255, 0.45);
+  --surface-a: rgba(8, 16, 49, 0.9);
+  --surface-b: rgba(17, 33, 85, 0.74);
+  --shadow-main: rgba(3, 9, 30, 0.7);
+  --shadow-inset: rgba(132, 220, 255, 0.16);
+  --field-bg: rgba(5, 12, 35, 0.9);
+  --field-border: rgba(117, 189, 255, 0.5);
+  --btn-bg: rgba(13, 25, 69, 0.85);
+  --btn-border: rgba(117, 189, 255, 0.38);
+  --player-border: rgba(132, 220, 255, 0.45);
+  --player-shadow: rgba(132, 220, 255, 0.18);
+  --player-bg: #020513;
+  --ambient-1: rgba(143, 211, 255, 0.2);
+  --ambient-2: rgba(109, 176, 255, 0.2);
+  --line-a: rgba(158, 227, 255, 0.12);
+  --line-b: rgba(132, 220, 255, 0.16);
+  --line-c: rgba(109, 176, 255, 0.11);
+  --drop-shadow: rgba(132, 220, 255, 0.28);
+  --ripple-ring: rgba(132, 220, 255, 0.12);
+  --spinner-color: rgba(132, 220, 255, 0.8);
+  --theme-image: none;
+  --theme-overlay: rgba(0, 0, 0, 0.25);
+}
+
+body[data-theme="micheal-scofield"] {
+  --bg-0: #050505;
+  --bg-1: #111111;
+  --bg-2: #1a1a1a;
+  --bolt: #d2d2d2;
+  --text: #f4f4f4;
+  --muted: #bbbbbb;
+  --panel: rgba(12, 12, 12, 0.88);
+  --panel-border: rgba(210, 210, 210, 0.32);
+  --surface-a: rgba(19, 19, 19, 0.94);
+  --surface-b: rgba(36, 36, 36, 0.85);
+  --shadow-main: rgba(0, 0, 0, 0.72);
+  --shadow-inset: rgba(255, 255, 255, 0.08);
+  --field-bg: rgba(22, 22, 22, 0.92);
+  --field-border: rgba(200, 200, 200, 0.3);
+  --btn-bg: rgba(28, 28, 28, 0.9);
+  --btn-border: rgba(200, 200, 200, 0.28);
+  --player-border: rgba(200, 200, 200, 0.4);
+  --player-shadow: rgba(255, 255, 255, 0.08);
+  --player-bg: #090909;
+  --ambient-1: rgba(255, 255, 255, 0.07);
+  --ambient-2: rgba(255, 255, 255, 0.06);
+  --line-a: rgba(255, 255, 255, 0.08);
+  --line-b: rgba(255, 255, 255, 0.1);
+  --line-c: rgba(255, 255, 255, 0.07);
+  --drop-shadow: rgba(255, 255, 255, 0.16);
+  --ripple-ring: rgba(255, 255, 255, 0.12);
+  --spinner-color: rgba(255, 255, 255, 0.85);
+  --theme-image: url("https://images4.alphacoders.com/797/thumb-1920-797164.jpg");
+  --theme-overlay: rgba(0, 0, 0, 0.6);
+}
+
+body[data-theme="rasengan"] {
+  --bg-0: #200604;
+  --bg-1: #4a0b08;
+  --bg-2: #7e130e;
+  --bolt: #ff4f32;
+  --text: #ffe5dc;
+  --muted: #ffbaa8;
+  --panel: rgba(57, 11, 8, 0.87);
+  --panel-border: rgba(255, 117, 89, 0.65);
+  --surface-a: rgba(65, 12, 9, 0.93);
+  --surface-b: rgba(121, 20, 14, 0.86);
+  --shadow-main: rgba(32, 2, 2, 0.72);
+  --shadow-inset: rgba(255, 98, 71, 0.2);
+  --field-bg: rgba(58, 10, 8, 0.92);
+  --field-border: rgba(255, 116, 88, 0.65);
+  --btn-bg: rgba(78, 14, 10, 0.86);
+  --btn-border: rgba(255, 109, 81, 0.55);
+  --player-border: rgba(255, 106, 79, 0.62);
+  --player-shadow: rgba(255, 83, 60, 0.22);
+  --player-bg: #190504;
+  --ambient-1: rgba(255, 104, 78, 0.22);
+  --ambient-2: rgba(200, 36, 25, 0.24);
+  --line-a: rgba(255, 120, 94, 0.16);
+  --line-b: rgba(255, 80, 57, 0.2);
+  --line-c: rgba(214, 35, 23, 0.16);
+  --drop-shadow: rgba(255, 92, 68, 0.34);
+  --ripple-ring: rgba(255, 106, 84, 0.2);
+  --spinner-color: rgba(255, 106, 79, 0.9);
+  --theme-image: url("https://i.ibb.co/nMb9XVdx/0761f2f1-6202-4958-8782-561e54ea39cb.jpg");
+  --theme-overlay: rgba(38, 10, 8, 0.48);
+}
+
+body[data-theme="ypk"] {
+  --bg-0: #2a0503;
+  --bg-1: #5a0d0a;
+  --bg-2: #8f1712;
+  --bolt: #ff4630;
+  --text: #ffe2dc;
+  --muted: #ffb9ac;
+  --panel: rgba(70, 11, 8, 0.87);
+  --panel-border: rgba(255, 112, 84, 0.65);
+  --surface-a: rgba(82, 12, 9, 0.93);
+  --surface-b: rgba(138, 21, 15, 0.86);
+  --shadow-main: rgba(40, 2, 2, 0.75);
+  --shadow-inset: rgba(255, 90, 62, 0.2);
+  --field-bg: rgba(66, 10, 8, 0.92);
+  --field-border: rgba(255, 118, 88, 0.65);
+  --btn-bg: rgba(89, 14, 10, 0.86);
+  --btn-border: rgba(255, 109, 81, 0.55);
+  --player-border: rgba(255, 106, 79, 0.62);
+  --player-shadow: rgba(255, 83, 60, 0.22);
+  --player-bg: #210604;
+  --ambient-1: rgba(255, 104, 78, 0.24);
+  --ambient-2: rgba(196, 30, 18, 0.24);
+  --line-a: rgba(255, 120, 94, 0.16);
+  --line-b: rgba(255, 80, 57, 0.2);
+  --line-c: rgba(214, 35, 23, 0.16);
+  --drop-shadow: rgba(255, 92, 68, 0.34);
+  --ripple-ring: rgba(255, 106, 84, 0.2);
+  --spinner-color: rgba(255, 106, 79, 0.9);
+  --theme-image: none;
+  --theme-overlay: rgba(38, 10, 8, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  color: var(--text);
+  font-family: Outfit, system-ui, sans-serif;
+  background:
+    radial-gradient(1300px 500px at 5% -10%, var(--ambient-1), transparent 70%),
+    radial-gradient(900px 420px at 95% 110%, var(--ambient-2), transparent 72%),
+    linear-gradient(160deg, var(--bg-0), var(--bg-1) 42%, var(--bg-2));
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  padding: 1rem;
+  overflow-y: auto;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    linear-gradient(var(--theme-overlay), var(--theme-overlay)),
+    var(--theme-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.55;
+}
+
+/* ── Site Lock ──────────────────────────────────────────────────── */
+
+.site-lock {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  background: rgba(4, 5, 11, 0.92);
+  backdrop-filter: blur(3px);
+}
+
+.site-lock.unlocked {
+  display: none;
+}
+
+.site-lock-card {
+  width: min(420px, calc(100vw - 2rem));
+  border-radius: 14px;
+  border: 1px solid var(--panel-border);
+  background: var(--panel);
+  box-shadow: 0 8px 40px var(--shadow-main), inset 0 0 24px var(--shadow-inset);
+  padding: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.site-lock-card h2,
+.site-lock-card p {
+  margin: 0;
+}
+
+.site-lock-card input,
+.site-lock-card button {
+  border-radius: 8px;
+  border: 1px solid var(--field-border);
+  background: var(--field-bg);
+  color: var(--text);
+  padding: 0.55rem 0.6rem;
+}
+
+.site-lock-card button {
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.site-lock-card button:hover {
+  background: var(--btn-bg);
+  border-color: var(--bolt);
+}
+
+.password-status {
+  min-height: 1.2rem;
+  color: #ff9f9f;
+  margin: 0;
+}
+
+/* ── Lightning overlay ──────────────────────────────────────────── */
+
+.lightning-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, transparent 20%, var(--line-a) 20.5%, transparent 23%),
+    linear-gradient(70deg, transparent 45%, var(--line-b) 45.4%, transparent 48%),
+    linear-gradient(140deg, transparent 68%, var(--line-c) 68.5%, transparent 71%);
+  filter: drop-shadow(0 0 20px var(--drop-shadow));
+  z-index: 0;
+  animation: glowSweep 7s ease-in-out infinite alternate;
+}
+
+.lightning-overlay::before,
+.lightning-overlay::after {
+  content: "";
+  position: absolute;
+  inset: -8%;
+  border-radius: 50%;
+  border: 2px solid var(--ripple-ring);
+  animation: ripplePulse 8s linear infinite;
+}
+
+.lightning-overlay::after {
+  animation-delay: -4s;
+}
+
+/* ── Shell ──────────────────────────────────────────────────────── */
+
+.hub-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1150px, 100%);
+  display: grid;
+  gap: 1rem;
+}
+
+/* ── Hero ───────────────────────────────────────────────────────── */
+
+.hero {
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  background: linear-gradient(160deg, var(--surface-a), var(--surface-b));
+  box-shadow: 0 10px 40px var(--shadow-main), inset 0 0 28px var(--shadow-inset);
+  padding: 1.1rem 1.2rem;
+  animation: panelFloat 5s ease-in-out infinite;
+}
+
+.hero-brand {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 170px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 0 30px var(--drop-shadow), 0 0 18px var(--ripple-ring);
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
+/* FIX: ypk-logo is its own class, no longer inherits hero-logo — no conflicting display rules */
+.ypk-logo {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-family: Orbitron, system-ui, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  background: linear-gradient(145deg, rgba(114, 21, 16, 0.95), rgba(183, 32, 22, 0.9));
+  color: #ffe2d5;
+  text-shadow: 0 0 12px rgba(255, 137, 105, 0.55);
+  aspect-ratio: 1 / 1;
+  width: min(170px, 100%);
+  max-width: 170px;
+  border-radius: 14px;
+  margin: 0;
+}
+
+body[data-theme="ypk"] .chidori-logo {
+  display: none;
+}
+
+body[data-theme="ypk"] .ypk-logo {
+  border: 1px solid rgba(255, 145, 117, 0.7);
+  box-shadow: 0 0 24px rgba(255, 95, 64, 0.36);
+}
+
+/* ── Side shoutout ──────────────────────────────────────────────── */
+
+.side-shoutout {
+  position: fixed;
+  top: 34%;
+  right: 0.6rem;
+  color: var(--bolt);
+  font-family: Orbitron, system-ui, sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.6rem);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-shadow: 0 0 16px var(--drop-shadow);
+  z-index: 2;
+  /* FIX: pointer-events none so it never blocks clicks on the player or matches */
+  pointer-events: none;
+  animation: shoutPulse 2.2s ease-in-out infinite;
+}
+
+/* ── Controls card ──────────────────────────────────────────────── */
+
+.controls-card {
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  background: var(--panel);
+  box-shadow: 0 10px 34px var(--shadow-main), inset 0 0 35px var(--shadow-inset);
+  padding: 0.85rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.filters label {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.filters select,
+.player-topbar select {
+  background: var(--field-bg);
+  color: var(--text);
+  border: 1px solid var(--field-border);
+  border-radius: 8px;
+  padding: 0.45rem 0.55rem;
+  cursor: pointer;
+}
+
+.status-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ── Content grid ───────────────────────────────────────────────── */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+}
+
+/* ── Matches card ───────────────────────────────────────────────── */
+
+.matches-card {
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  background: var(--panel);
+  box-shadow: 0 10px 34px var(--shadow-main), inset 0 0 35px var(--shadow-inset);
+  padding: 0.9rem;
+  min-height: 420px;
+}
+
+.matches-card h2,
+.player-topbar h2 {
+  margin: 0;
+  font-family: Orbitron, system-ui, sans-serif;
+  font-size: 1rem;
+}
+
+.matches-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+  max-height: 600px;
+  overflow-y: auto;
+  /* FIX: subtle scrollbar so it doesn't look broken on webkit */
+  scrollbar-width: thin;
+  scrollbar-color: var(--panel-border) transparent;
+}
+
+.matches-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.matches-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.matches-list::-webkit-scrollbar-thumb {
+  background: var(--panel-border);
+  border-radius: 999px;
+}
+
+/* FIX: removed panelFloat from match buttons — it caused layout jank and visual noise on long lists */
+.match-btn {
+  position: relative;
+  background: var(--btn-bg);
+  color: var(--text);
+  border: 1px solid var(--btn-border);
+  border-radius: 10px;
+  padding: 0.9rem 0.7rem 0.7rem;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.match-btn:hover,
+.match-btn.active {
+  border-color: var(--bolt);
+  box-shadow: 0 0 16px var(--drop-shadow);
+}
+
+.match-btn.checking {
+  border-style: dashed;
+}
+
+.match-btn.no-source {
+  border-color: rgba(255, 92, 92, 0.9);
+  background: rgba(87, 19, 19, 0.78);
+  box-shadow: 0 0 12px rgba(255, 84, 84, 0.25);
+}
+
+.match-btn.no-source::before {
+  content: "no stream sorry ⚡";
+  position: absolute;
+  top: -0.52rem;
+  left: 0.7rem;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.12rem 0.36rem;
+  border-radius: 999px;
+  color: #fff7f7;
+  background: rgba(235, 65, 65, 0.95);
+  border: 1px solid rgba(255, 215, 215, 0.5);
+}
+
+.match-btn.has-stream {
+  border-color: rgba(73, 204, 121, 0.75);
+  background: rgba(17, 72, 42, 0.65);
+  box-shadow: 0 0 14px rgba(81, 216, 132, 0.28);
+}
+
+.match-btn.has-stream .match-time {
+  color: #bcf3d1;
+}
+
+.match-btn.no-source .match-time {
+  color: #ffaeae;
+}
+
+/* ── Match status icon ──────────────────────────────────────────── */
+
+.match-status-icon {
+  position: absolute;
+  top: 0.45rem;
+  left: 0.45rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 0.62rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+.status-checking {
+  background: rgba(120, 130, 160, 0.8);
+}
+
+.status-live {
+  background: rgba(26, 175, 95, 0.95);
+  box-shadow: 0 0 10px rgba(26, 175, 95, 0.45);
+}
+
+.status-upcoming {
+  background: rgba(233, 168, 66, 0.95);
+  box-shadow: 0 0 10px rgba(233, 168, 66, 0.4);
+}
+
+.status-no-source {
+  background: rgba(225, 56, 56, 0.95);
+  box-shadow: 0 0 10px rgba(225, 56, 56, 0.45);
+}
+
+.match-title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.match-time {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+/* ── Hero typography ────────────────────────────────────────────── */
+
+.kicker {
+  margin: 0;
+  color: var(--bolt);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: clamp(1.05rem, 2.1vw, 1.5rem);
+}
+
+.hero h1 {
+  margin: 0.45rem 0 0;
+  font-family: Orbitron, system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  font-size: clamp(0.95rem, 1.9vw, 1.35rem);
+  text-shadow: 0 0 12px var(--drop-shadow);
+  animation: textPulse 2.8s ease-in-out infinite;
+}
+
+.subtext {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+}
+
+body[data-theme="rasengan"] .kicker {
+  color: #ff7a58;
+}
+
+body[data-theme="rasengan"] .hero h1 {
+  text-shadow: 0 0 14px rgba(255, 87, 60, 0.5);
+}
+
+body[data-theme="micheal-scofield"] .hero h1 {
+  text-shadow: 0 0 14px rgba(255, 255, 255, 0.3);
+}
+
+/* ── Player card ────────────────────────────────────────────────── */
+
+.player-card {
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  background: var(--panel);
+  padding: 0.9rem;
+  box-shadow: 0 10px 34px var(--shadow-main), inset 0 0 35px var(--shadow-inset);
+  animation: panelFloat 6s ease-in-out infinite reverse;
+}
+
+.player-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.player-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--player-border);
+  box-shadow: 0 0 24px var(--player-shadow);
+  background: var(--player-bg);
+}
+
+.player-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* FIX: loading overlay for the player while streams buffer */
+.player-loading-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: var(--player-bg);
+  display: grid;
+  place-items: center;
+  place-content: center;
+  gap: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.player-spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(255, 255, 255, 0.08);
+  border-top-color: var(--spinner-color);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+/* ── Animations ─────────────────────────────────────────────────── */
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes ripplePulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+@keyframes glowSweep {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes panelFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes shoutPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes textPulse {
+  0%,
+  100% {
+    letter-spacing: 0.02em;
+  }
+  50% {
+    letter-spacing: 0.03em;
+  }
+}
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+
+@media (max-width: 700px) {
+  body {
+    padding: 0.7rem;
+  }
+
+  .hero,
+  .player-card,
+  .controls-card,
+  .matches-card {
+    border-radius: 12px;
+  }
+
+  .hero-brand {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-logo {
+    max-width: 220px;
+  }
+
+  .controls-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .side-shoutout {
+    top: 0.2rem;
+    right: 0.5rem;
+    font-size: 0.88rem;
+  }
+}
